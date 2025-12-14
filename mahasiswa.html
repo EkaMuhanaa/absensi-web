@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Absensi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Absensi Mahasiswa</h1>
+      <button onclick="logout()" style="float: right; margin-bottom: 10px">
+        Logout
+      </button>
+
+      <div class="card">
+        <label>Mata Kuliah</label>
+        <select id="matkulSelect">
+          <option>Pemrograman Web</option>
+          <option>Basis Data</option>
+        </select>
+
+        <label>Pertemuan</label>
+        <select id="pertemuanMhs"></select>
+      </div>
+
+      <div class="card">
+        <h3>Status Kehadiran</h3>
+        <ul id="statusList"></ul>
+      </div>
+
+      <div class="card center">
+        <h3>Scan Barcode</h3>
+        <video id="video" autoplay></video>
+        <p id="hasilScan" class="success"></p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

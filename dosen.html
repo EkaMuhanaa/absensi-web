@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Absensi Dosen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dashboard Dosen</h1>
+      <button onclick="logout()" style="float: right; margin-bottom: 10px">
+        Logout
+      </button>
+
+      <div class="card">
+        <label>Kelas</label>
+        <select id="kelasSelect">
+          <option>Kelas A</option>
+          <option>Kelas B</option>
+        </select>
+
+        <label>Pertemuan</label>
+        <select id="pertemuanSelect"></select>
+      </div>
+
+      <div class="card">
+        <h3>Persentase Kehadiran</h3>
+        <p id="persentase">0%</p>
+      </div>
+
+      <div class="card">
+        <h3>Daftar Mahasiswa</h3>
+        <ul id="mahasiswaList"></ul>
+      </div>
+
+      <div class="card center">
+        <h3>Barcode Absensi</h3>
+        <canvas id="qrDosen"></canvas>
+        <p class="note">Scan oleh mahasiswa untuk hadir</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
